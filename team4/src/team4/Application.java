@@ -7,10 +7,8 @@ public class Application {
 		
 		
 //test
-		//홍수민
 		
-		
-		//민수
+		//준영
 	}
 
 }
