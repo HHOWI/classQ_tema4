@@ -8,7 +8,7 @@ public class Application {
 		
 //test
 		
-		//준영
+		
 	}
 
 }
