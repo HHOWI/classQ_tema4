@@ -7,7 +7,20 @@ public class Application {
 		
 
 		
-		//ㅎㅎ
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		System.out.println("충돌");
+		
+		
+		
 	}
 
 }
