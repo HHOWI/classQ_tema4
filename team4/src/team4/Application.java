@@ -8,8 +8,6 @@ public class Application {
 
 		
 		
-		// 최승환
-		
 	}
 
 }
