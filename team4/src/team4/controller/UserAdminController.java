@@ -13,12 +13,19 @@ public class UserAdminController {
 	Admin admin = null;
 	private HashMap<String,User> hMap = new HashMap<>();
 	
+
 	public boolean addManager(String id, Admin a) {
 		if(hMap.containsKey(id)) {
 //			hMap.put(id, a);		
 			return true;
 		}
-		return false;// 관리자 추가 아이시발 깜빡했네이거
+		return false;
+
+
+	}
+	public void addManager() {// 관리자 추가 아이시발 깜빡했네이거
+
+
 
 	}
 		
@@ -65,10 +72,18 @@ public class UserAdminController {
 		
 	}
 	
+
+
+	
+	
+	
+	
+
 	public<blackUser> void black(/*String blackUser*/) {// 유저 밴
 		Scanner sc = new Scanner(System.in);
 	
 		System.out.print("블랙시킬 기간을 입력하세요 : ");
+
 		
 		System.out.print("년 : ");
 		int year = Integer.parseInt(sc.nextLine());

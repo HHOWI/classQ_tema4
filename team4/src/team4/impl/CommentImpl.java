@@ -16,4 +16,6 @@ public interface CommentImpl {
 	
 	public void likeComment(int index, String like);
 	
+	public void replyComment(String id, String password, Comment comment);
+	
 }
