@@ -35,7 +35,10 @@ public class BoardController {
 	}
 	
 	
+	
+	
 	public int postPage (int page , Post post){                                                    
+		
 		
 	
 		int posts = post.getPostNum();

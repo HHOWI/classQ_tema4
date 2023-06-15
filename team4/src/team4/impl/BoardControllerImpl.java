@@ -20,5 +20,5 @@ public interface BoardControllerImpl {
 	
 	public void updataBoard(int index, Board board);  // 게시판 수정
 	
-	public void deleteBoard(Board board);          // 게시판 삭제
+	public void deleteBoard(Board board);             // 게시판 삭제
 }
