@@ -8,6 +8,7 @@ import team4.model.Post;
 
 public class PostController {
 
+
 	ArrayList<Post> postList = new ArrayList<>();
 	
 	public void addPost(Post post) {		// 게시글 작성
@@ -31,4 +32,9 @@ public class PostController {
 	}
 	
 }
+
+
+
+	
+	
 

@@ -9,6 +9,7 @@ public class Comment {
 	
 	private User user;
 
+
 	public Comment() {}
 
 	public Comment(String id, String comment, String writingTime, String like, User user) {
@@ -19,6 +20,7 @@ public class Comment {
 		this.like = like;
 		this.user = user;
 	}
+
 
 	public String getId() {
 		return id;
@@ -60,12 +62,13 @@ public class Comment {
 		this.user = user;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comment=" + comment + ", writingTime=" + writingTime + ", like=" + like
 				+ ", user=" + user + "]";
 	}
-	
+
 	
 	
 }
