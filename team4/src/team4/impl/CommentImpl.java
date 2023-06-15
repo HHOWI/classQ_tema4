@@ -12,4 +12,8 @@ public interface CommentImpl {
 
 	public void deleteComment(int index);
 	
+    //
+	
+	public void likeComment(int index, String like);
+	
 }
