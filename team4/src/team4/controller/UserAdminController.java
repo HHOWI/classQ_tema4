@@ -14,17 +14,12 @@ public class UserAdminController {
 	private HashMap<String,User> hMap = new HashMap<>();
 	
 
-	public boolean addManager(String id, Admin a) {
+	public boolean addManager(String id, User a) {
 		if(hMap.containsKey(id)) {
-//			hMap.put(id, a);		
+			hMap.put(id, a);		
 			return true;
 		}
 		return false;
-
-
-	}
-	public void addManager() {// 관리자 추가 아이시발 깜빡했네이거
-
 
 
 	}
@@ -71,15 +66,9 @@ public class UserAdminController {
 		return false;
 		
 	}
-	
+			
 
-
-	
-	
-	
-	
-
-	public<blackUser> void black(/*String blackUser*/) {// 유저 밴
+	public<blackUser> void black(/*String blackUser*/) {// 유저 밴 며칠이나 몇개월로 설정하고 싶은데 못해서 일단 걍때려박았음
 		Scanner sc = new Scanner(System.in);
 	
 		System.out.print("블랙시킬 기간을 입력하세요 : ");
