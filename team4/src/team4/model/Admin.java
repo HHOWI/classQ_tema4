@@ -9,10 +9,10 @@ public class Admin {
 	private String password;// 관리자 pw
 	private String nickName;// 관리자 닉네임
 
+
 	public Admin() {
 		super();
 
-		
 	}
 	public Admin(String logo, String id, String password, String nickName) {
 		super();
@@ -49,6 +49,7 @@ public class Admin {
 	public String toString() {
 		return "Admin [logo=" + logo + ", id=" + id + ", password=" + password + ", nickName=" + nickName + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, logo, nickName, password);
@@ -65,5 +66,6 @@ public class Admin {
 		return Objects.equals(id, other.id) && Objects.equals(logo, other.logo)
 				&& Objects.equals(nickName, other.nickName) && Objects.equals(password, other.password);
 	}
+
 	
 }
