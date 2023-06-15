@@ -5,9 +5,10 @@ public class Comment {
 	private String id;
 	private String comment;
 	private String writingTime;
-	private String like;
+	private String like;			// 좋아요만 있고 싫어요는 없는게 컨셉
 	
 	private User user;
+
 
 	public Comment() {}
 
@@ -19,6 +20,7 @@ public class Comment {
 		this.like = like;
 		this.user = user;
 	}
+
 
 	public String getId() {
 		return id;
@@ -60,12 +62,13 @@ public class Comment {
 		this.user = user;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comment=" + comment + ", writingTime=" + writingTime + ", like=" + like
 				+ ", user=" + user + "]";
 	}
-	
+
 	
 	
 }
