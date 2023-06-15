@@ -25,7 +25,12 @@ public class BoardController {
 		
 		if(user.getId().equals(admin.getId()) ) {			
 			boardList.add(board);	
+			
+		}else {
+			System.out.println("Admin 전용입니다.");
 		}
+		
+		
 		
 	}
 	
@@ -81,19 +86,23 @@ public class BoardController {
 	
 		if(user.getId().equals(admin.getId()) ) {			
 			boardList.set(index, board);			
+		}else {
+			System.out.println("Admin 전용입니다.");
 		}
 		
 	}
 	
 	
-	public boolean deleteBoard(Board board) {                                          // 게시판 삭제
+	public void deleteBoard(Board board) {                                          // 게시판 삭제
 		
 		
 		if(user.getId().equals(admin.getId()) ) {			
 			
-			return boardList.remove(board);
+			 boardList.remove(board);
+		}else {
+			System.out.println("Admin 전용입니다.");
 		}
 		
-      return false;
+      
 
 }}
