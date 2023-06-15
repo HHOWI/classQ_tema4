@@ -13,7 +13,12 @@ public class UserAdminController {
 	Admin admin = null;
 	private HashMap<String,User> hMap = new HashMap<>();
 	
-	public void addManager() {// 관리자 추가 아이시발 깜빡했네이거
+	public boolean addManager(String id, Admin a) {
+		if(hMap.containsKey(id)) {
+//			hMap.put(id, a);		
+			return true;
+		}
+		return false;// 관리자 추가 아이시발 깜빡했네이거
 
 	}
 		
