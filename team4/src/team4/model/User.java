@@ -1,5 +1,7 @@
 package team4.model;
 
+import java.util.List;
+
 public class User {
 
 	
@@ -21,5 +23,6 @@ public class User {
 	private String bloodType;		// 혈액형
 	private boolean lover; 			// 애인여부
 	
-
+	private List<Category> category;
+	
 }
