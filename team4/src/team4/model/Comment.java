@@ -4,7 +4,7 @@ public class Comment {
 
 	private String id;
 	private String comment;
-	private String writingTime;
+	private String writingTime;     // 작성 시간
 	private String like;			// 좋아요만 있고 싫어요는 없는게 컨셉
 	
 	private User user;

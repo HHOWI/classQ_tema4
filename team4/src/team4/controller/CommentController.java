@@ -12,7 +12,7 @@ public class CommentController {
 
 	List<Comment> comments = new ArrayList<>();
 	UserAdminController uac = new UserAdminController();
-    User user = null;
+	User user = null;
 
 	// 댓글 작성
 	public void addComment(String id, String password, Comment comment) {
@@ -23,8 +23,8 @@ public class CommentController {
 	}
 
 
-	
-	
+
+
 	// 댓글 보기
 	public Comment viewComment(int index) {
 		return comments.get(index);
@@ -35,29 +35,28 @@ public class CommentController {
 	// 댓글 수정 (로그인한 회원과 댓글 작성자가 일치)
 
 	public void updateComment(int index, Comment comment) {
-		
-	
-		
-		comments.set(index, comment);
+
+		if(comment.getId().equals(user.getId())) {
+			comments.set(index, comment);
+		}
+
 	}
 
-	
-	
 	// 댓글 삭제 (로그인한 회원과 댓글 작성자가 일치)
 
-    public void deleteComment(int index) {
-    	
-   
-    	
-    	comments.remove(index);
-    }
-    
-   
-	
+	public void deleteComment(int index, Comment comment) {
+
+
+		if(comment.getId().equals(user.getId())) {
+			comments.remove(index);
+		}
+
+	}
+
 	public void replyComment(String id, String password, Comment comment) { // 답글 추가
 		comments.add(comment);
 	}
-	
+
 	public void likeComment(int index, Comment like) { // 좋아요 추가
 		comments.add(like);
 	}
