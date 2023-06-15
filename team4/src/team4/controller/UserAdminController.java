@@ -9,6 +9,7 @@ public class UserAdminController {
 
 	Admin admin = null;
 	private HashMap<String,User> hMap = new HashMap<>();
+	
 	public void addManager() {// 관리자 추가
 
 	}
@@ -41,6 +42,11 @@ public class UserAdminController {
 		return false;
 		
 	}
+	
+
+	
+	
+	
 	
 	public void blackUser(String blackUser) {// 유저 밴
 		
