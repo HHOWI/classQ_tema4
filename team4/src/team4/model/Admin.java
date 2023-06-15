@@ -14,7 +14,7 @@ public class Admin {
 	private String manageUser;// 유저 관리
 	
 	private String manageBoard;// 게시판 관리
-	public Admin() {
+	public Admin() {;kl
 		super();
 	}
 	public Admin(String id, String password, String nickname, String addManager, String ban, String qAanswer,
