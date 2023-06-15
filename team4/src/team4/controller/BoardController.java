@@ -14,6 +14,7 @@ public class BoardController {
 	Admin admin = new Admin();
 	User user = new User();
 	Post post = new Post();
+	PostController pc = new PostController();
 	
 	ArrayList<Board> boardList = new ArrayList<>();
 	
@@ -41,9 +42,9 @@ public class BoardController {
 		
 		
 	
-		int posts = post.getPostNum();
+		int posts = pc.postList().size();
 		
-	   if(posts >= 20) {                                                               // 게시판 페이지수 추가
+	   if(posts == 20) {                                                               // 게시판 페이지수 추가
 		page++;                 // if문 이용하여 게시글수 20개 이상일때 페이지수 추가
 	}
 	
@@ -52,21 +53,12 @@ public class BoardController {
 	
 	
 	
-//	private List visitBoardList() {                                                    // 마지막 방문 게시판 목록
-//		
-//		
-//		
-//		
-//		
-//		 int lastBoard = boardList.size();
-//		
-//		 for(int i = 0; i == lastBoard; i++) {
-//			 
-//		 }
-//		 
-//		return boardList;
-//		
-//	}
+	private List visitBoardList() {                                                    // 마지막 방문 게시판 목록
+		
+		
+		return (List) pc.viewPost(0);
+		
+	}
 
 	
 	
@@ -108,4 +100,6 @@ public class BoardController {
 		
       
 
-}}
+}
+	
+}

@@ -12,7 +12,9 @@ public interface BoardControllerImpl {
 	
 	public int postPage (int page);                   // 게시판 페이시수 추가
 
-//	private List visitBoardList();                    // 마지막 방문 게시판 목록 
+	private List visitBoardList() {                   // 마지막 방문 게시판 목록 
+		return null;
+	}                    
 	
 	public ArrayList<Board> boardList();              // 게시판 목록
 	

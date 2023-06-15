@@ -1,7 +1,6 @@
 package team4.controller;
 
 import java.util.ArrayList;
-
 import team4.model.Admin;
 import team4.model.Category;
 import team4.model.Interest;
@@ -9,6 +8,7 @@ import team4.model.Post;
 import team4.model.User;
 
 public class CategoryController {
+
 
 	Category category = new Category();
 	Admin admin = new Admin();
@@ -76,3 +76,7 @@ public class CategoryController {
 
 
 }
+
+
+		
+	

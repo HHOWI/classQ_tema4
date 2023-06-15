@@ -1,5 +1,6 @@
 package team4.impl;
 
+
 import java.util.ArrayList;
 
 import team4.model.Category;
@@ -22,3 +23,4 @@ public interface CategoryControllerImpl {
 	public void deleteInterest(Interest interest); // 관심사 선택 해제
 
 }
+
