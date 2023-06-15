@@ -13,4 +13,7 @@ public interface PostImpl {
 	public void deletePost(int index);
 	
 	
+	
+	
+	
 }
