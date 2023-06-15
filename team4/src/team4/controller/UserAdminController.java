@@ -13,7 +13,7 @@ public class UserAdminController {
 	Admin admin = null;
 	private HashMap<String,User> hMap = new HashMap<>();
 	
-	public void addManager() {// 관리자 추가
+	public void addManager() {// 관리자 추가 아이시발 깜빡했네이거
 
 	}
 		

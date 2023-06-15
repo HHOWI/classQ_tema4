@@ -4,8 +4,12 @@ import team4.model.User;
 
 public interface UserAdminControllerImpl {
 
-	public boolean login();
+	public void addManager();
 
+	public boolean login();
+	
+	public boolean nickName();
+	
 	public boolean signUp();
 
 	public User viewProfile();
@@ -13,8 +17,6 @@ public interface UserAdminControllerImpl {
 	public User updateProfile();
 
 	public boolean deleteProfile();
-	
-	public void addManager();
 	
 	public int blackUser();  
 	
