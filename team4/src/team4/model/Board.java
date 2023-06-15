@@ -21,9 +21,4 @@ public class Board {
 	private String serchSelect;     // 검색 선택란 (말머리, 작성자, 게시글제목 ...)
 	
 	
-
-	
-	// 제발
-	
-	
 }
