@@ -10,6 +10,8 @@ public class PostController {
 
 
 	ArrayList<Post> postList = new ArrayList<>();
+	UserAdminController uac = new UserAdminController();
+	
 	
 	public void addPost(Post post) {		// 게시글 작성
 		postList.add(post);
