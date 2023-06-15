@@ -56,7 +56,17 @@ public class BoardController {
 	private List visitBoardList() {                                                    // 마지막 방문 게시판 목록
 		
 		
-		return (List) pc.viewPost(0);
+		List lastList = null;
+		
+		
+		for( int i =0; i ==pc.postList().size(); i++  ) {
+					
+			lastList = (List) pc.viewPost(i);
+			
+		}
+		
+		
+		return lastList;
 		
 	}
 
