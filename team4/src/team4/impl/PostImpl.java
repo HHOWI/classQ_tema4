@@ -4,7 +4,9 @@ import team4.model.Post;
 
 public interface PostImpl {
 
-	public void addPost(String id, String password, Post Post);
+	public void uploadPost(String id, String password, Post Post);
+	
+	public Post[] postList();
 
 	public Post viewPost(int index);
 
