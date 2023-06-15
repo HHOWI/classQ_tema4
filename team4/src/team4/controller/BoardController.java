@@ -41,11 +41,5 @@ public class BoardController {
 		
 		return boardList.remove(board);
 	}
-	
-	
-	
-	
-	
-	
 
 }
