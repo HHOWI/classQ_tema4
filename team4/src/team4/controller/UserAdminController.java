@@ -6,37 +6,39 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-
-import team4.model.Admin;
 import team4.model.Comment;
 import team4.model.User;
 
 public class UserAdminController {
-
+	
 	User user = new User();
-	Admin admin = null;
+	boolean admin = user.isAdmin();
 	List<Comment> comments = new ArrayList<>();
 	private HashMap<String,User> hMap = new HashMap<>();
+	private ArrayList<User> list = new ArrayList<>();
 	
+	public void signUp(User user) {
+		
+		list.add(user);
+	}
 
-	public boolean addManager(String id, User a) {
-		if(hMap.containsKey(id)) {
-			hMap.put(id, a);		
-			return true;
+	public void addManager(User user ) {
+		if(user.isAdmin()) {
+			user.setId(user.getId());
+			user.setPassword(user.getPassword());
+			user.setAdmin(true);
 		}
-		return false;
-
 
 	}
 		
 	
-	public boolean login(String id, String password) {// 관리자로그인
-		if(admin != null && admin.getId()
-	.equals(id)&&admin.getPassword().equals(password)) {
-		return true;	
+	public void login(User user) {// 관리자로그인
+		if(user.isAdmin()) {
+			user.getId();
+			user.getPassword();
 		}
-			return false;
 	}
+	
 	public boolean setnickName(String nickName) {// 닉네임설정
 		if(hMap.containsKey(nickName)) {
 			hMap.put(nickName, null);
@@ -48,18 +50,14 @@ public class UserAdminController {
 
 		
 	// 유저 관리
-	public Admin  userViewProfile(){
-		if(login(admin.getId(),admin.getPassword())) {
-			return admin;
-		}
-		return null;
-	}
-	public Admin userUpdateProfile() {
-		if(login(this.admin.getId(), this.admin.getPassword())) {
-			this.admin = admin;
+	public void  userViewProfile(User viewuser){// 유저 계정 보기
+		if(user.isAdmin()) {
+			
 		}
 		
-		return this.admin;
+	}
+	public void userUpdateProfile(User updateuser) {// 유저 계정 업데이트
+		
 		
 	}
 	public boolean userDeleteProfile(String id) {//  계정삭제
@@ -107,7 +105,7 @@ public class UserAdminController {
 		
 		
 		
-		if(user.getId().equals(admin.getId()) ) {
+		if(user.getId().equals(user.getId()) ) {
 			comments.add(comment);
 		}else {
 			System.out.println("Admin 전용입니다.");
