@@ -83,7 +83,7 @@ public class BoardController {
 	
 	public void readBoard ( int index) {                                                // 게시글 보기
 		
-		boardList.get(index);
+		pc.postList.get(index);
 	}
 	
 	
