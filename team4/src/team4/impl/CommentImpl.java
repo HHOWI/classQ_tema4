@@ -12,8 +12,6 @@ public interface CommentImpl {
 
 	public void deleteComment(int index); // 댓글 삭제
 	
-    //
-	
 	public void likeComment(int index, String like); // 좋아요
 	
 	public void replyComment(String id, String password, Comment comment); // 답글 추가

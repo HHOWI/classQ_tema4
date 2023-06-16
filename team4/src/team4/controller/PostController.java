@@ -3,9 +3,11 @@ package team4.controller;
 import java.util.ArrayList;
 
 import team4.model.Post;
+import team4.model.User;
 
 public class PostController {
 
+	User user = new User();
 	ArrayList<Post> postList = new ArrayList<>();
 	UserAdminController uac = new UserAdminController();
 
@@ -27,6 +29,16 @@ public class PostController {
 
 	public boolean deletePost(Post post) { // 게시글 삭제
 		return postList.remove(post);
+	}
+
+	public void adminReadPost(int index) { // QnA 게시글 보기
+
+		if (user.isAdmin()) {
+			postList.get(index);
+		} else {
+			System.out.println("관리자만 해당 게시글을 확인할 수 있습니다.");
+		}
+
 	}
 
 }

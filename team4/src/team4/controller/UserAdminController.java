@@ -24,24 +24,16 @@ public class UserAdminController {
 		list.add(user);
 	}
 
-	public void login(String id, String password) {
+	public boolean login(String id, String password) {
 
-		boolean successLogin = false;
 
 		for (User user : list) {
 
 			if (user.getId().equals(id) && user.getPassword().equals(password)) {
-				successLogin = true;
-				break;
+				return true;
 			}
-
 		}
-		if (successLogin) {
-			System.out.println("로그인 성공!");
-		} else {
-			System.out.println("아이디 또는 패스워드가 일치하지 않습니다.");
-		}
-
+		return false;
 	}
 
 	public void logout() {
@@ -56,11 +48,6 @@ public class UserAdminController {
 
 	}
 
-	public void setnickName(String nickName) {// 닉네임설정, 로그인한 상태에서 수정할 수 있도록 구현해야함(구현방법을 모르겠어요 ㅠㅠ)
-
-		user.setNickname(nickName);
-
-	}
 
 	// 유저 관리
 	public List<User> userViewProfile(String userId) {// 유저 계정 정보 보기

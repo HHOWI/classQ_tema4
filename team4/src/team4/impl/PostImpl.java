@@ -14,7 +14,7 @@ public interface PostImpl {
 
 	public void deletePost(int index);
 	
-	
+	public void scrap(int index);
 	
 	
 	
