@@ -87,15 +87,15 @@ public class BoardController {
 	}
 	
 	
-	private int recommends(int index , Post recommends) {                                            // 게시글 추천수 보기
-		
+	private int recommends (Post recommends) {                                            // 게시글 추천수 보기
+		 
 		int recommendCount = recommends.getRecommends();
 		
 		return recommendCount;
 		                                                        
 		
 	}
-	private int views(int index , Post views) {                                                       // 게시글 조회수 보기
+	private int views (Post views) {                                                       // 게시글 조회수 보기
 		
 		int viewCount = views.getViews();
 		
@@ -104,7 +104,7 @@ public class BoardController {
 	}
 	
 	
-	private int comments(int index , Comment comment) {                                             // 게시글 댓글수 보기
+	private int comments (Comment comment) {                                             // 게시글 댓글수 보기
 		 
 		
 		
