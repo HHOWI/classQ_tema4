@@ -19,6 +19,7 @@ public class CommentController {
 
 		if(uac.login(id, password)) {       
 			comments.add(comment);
+			
 		}
 	}
 

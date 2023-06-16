@@ -22,22 +22,25 @@ public interface BoardControllerImpl {
 	   
 	public void readBoard ( int index);                      // 게시글 보기
 	
-	private int recommends(Post recommends) {    // 게시글 추천수 보기
+	public void adiminReadBoard (int index);                 // QnA(어드민전용)게시글 보기
+	
+	private int recommends(Post recommends) {                // 게시글 추천수 보기
 		
 		return 0;	
 	}
 	
-	private int views(Post views) {              // 게시글 조회수 보기                                
+	private int views(Post views) {                          // 게시글 조회수 보기                                
 		
 		return 0;
     }
     
-	private int comments(Comment comment) {     // 게시글 댓글수 보기
-		 
+	private int comments(Comment comment) {                  // 게시글 댓글수 보기
 		return 0;
-	}
+	}                 
+		 
 	
-	public void updataBoard(int index, Board board);        // 게시판 수정
 	
-	public void deleteBoard(Board board);                   // 게시판 삭제
+	public void updataBoard(int index, Board board);         // 게시판 수정
+	
+	public void deleteBoard(Board board);                    // 게시판 삭제
 }
