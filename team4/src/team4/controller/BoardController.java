@@ -2,7 +2,7 @@ package team4.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
 
 import team4.model.Board;
 import team4.model.Comment;
@@ -18,6 +18,8 @@ public class BoardController {
 	
 	ArrayList<Board> boardList = new ArrayList<>();
 	
+	
+	Scanner sc = new Scanner(System.in);
 	// CRUD
 	
 	
@@ -30,11 +32,14 @@ public class BoardController {
 		if(admin)  {			
 			boardList.add(board);	
 			
+		if (boardList.contains(board)) {
+			System.out.println("중복된 게시판이 있습니다.");
+		}
+			
 		}else {
 			System.out.println("Admin 전용입니다.");
-		}
 		
-		
+	}
 		
 	}
 	
@@ -83,7 +88,7 @@ public class BoardController {
 	
 	public void readBoard ( int index) {                                                // 게시글 보기
 		
-		boardList.get(index);
+		pc.postList.get(index);
 	}
 	
 	
@@ -119,10 +124,22 @@ public class BoardController {
 	// 게시판 수정 및 삭제는 admin 계정만 가능하도록 설정하기
 	// 맞는지 확인필요
 	
-	public void updataBoard(int index, Board board) {                                  // 게시판 수정
+	public void updataBoard(Board board) {                                  // 게시판 수정
 	
-		if(admin)  {			
-			boardList.set(index, board);			
+		if(admin && boardList.contains(board))  {			
+					
+			int index = boardList.indexOf(board);
+			if (index != -1) {
+				System.out.println("변경할 게시판 명을 입력해주세요 : ");
+				String newBoardName = sc.nextLine();
+				boardList.get(index).setBoardName(newBoardName);
+				System.out.println("게시판 이름이 수정되었습니다.");
+			} else {
+				System.out.println("해당 카테고리를 찾을 수 없습니다.");
+			}
+			
+			
+			
 		}else {
 			System.out.println("Admin 전용입니다.");
 		}
@@ -133,7 +150,7 @@ public class BoardController {
 	public void deleteBoard(Board board) {                                          // 게시판 삭제
 		
 		
-		if(admin)  {			
+		if(admin && boardList.contains(board))  {			
 			
 			 boardList.remove(board);
 		}else {
