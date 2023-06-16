@@ -14,14 +14,11 @@ public class Post {
 	private int recommends;         // 추천수
 	private int views;              // 조회수
 	private int comments;           // 댓글수
-	private String serch;           // 검색란
-	private String serchSelect;     // 검색 선택란 (말머리, 작성자, 게시글제목 ...)
 	public Post() {
 		super();
-	
 	}
 	public Post(String posttitle, String postThema, String writepost, String postWriter, Date uploadDate, int postNum,
-			int recommends, int views, int comments, String serch, String serchSelect) {
+			int recommends, int views, int comments) {
 		super();
 		this.posttitle = posttitle;
 		this.postThema = postThema;
@@ -32,8 +29,6 @@ public class Post {
 		this.recommends = recommends;
 		this.views = views;
 		this.comments = comments;
-		this.serch = serch;
-		this.serchSelect = serchSelect;
 	}
 	public String getPosttitle() {
 		return posttitle;
@@ -89,29 +84,16 @@ public class Post {
 	public void setComments(int comments) {
 		this.comments = comments;
 	}
-	public String getSerch() {
-		return serch;
-	}
-	public void setSerch(String serch) {
-		this.serch = serch;
-	}
-	public String getSerchSelect() {
-		return serchSelect;
-	}
-	public void setSerchSelect(String serchSelect) {
-		this.serchSelect = serchSelect;
-	}
 	@Override
 	public String toString() {
 		return "Post [posttitle=" + posttitle + ", postThema=" + postThema + ", writepost=" + writepost
 				+ ", postWriter=" + postWriter + ", uploadDate=" + uploadDate + ", postNum=" + postNum + ", recommends="
-				+ recommends + ", views=" + views + ", comments=" + comments + ", serch=" + serch + ", serchSelect="
-				+ serchSelect + "]";
+				+ recommends + ", views=" + views + ", comments=" + comments + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(comments, postNum, postThema, postWriter, posttitle, recommends, serch, serchSelect,
-				uploadDate, views, writepost);
+		return Objects.hash(comments, postNum, postThema, postWriter, posttitle, recommends, uploadDate, views,
+				writepost);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -124,11 +106,12 @@ public class Post {
 		Post other = (Post) obj;
 		return comments == other.comments && postNum == other.postNum && Objects.equals(postThema, other.postThema)
 				&& Objects.equals(postWriter, other.postWriter) && Objects.equals(posttitle, other.posttitle)
-				&& recommends == other.recommends && Objects.equals(serch, other.serch)
-				&& Objects.equals(serchSelect, other.serchSelect) && Objects.equals(uploadDate, other.uploadDate)
+				&& recommends == other.recommends && Objects.equals(uploadDate, other.uploadDate)
 				&& views == other.views && Objects.equals(writepost, other.writepost);
 	}
 	
 	
-}
 
+	
+	
+}
