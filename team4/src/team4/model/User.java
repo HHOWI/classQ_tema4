@@ -10,7 +10,7 @@ public class User {
 	private String id;				// 아이디
 	private String password;		// 비밀번호
 	private int age; 				// 나이
-	private char gender; 			// 성별
+	private String gender; 			// 성별
 	private String city; 			// 지역
 	private String phone;			// 핸드폰번호
 	private String email;			// 이메일
@@ -24,16 +24,17 @@ public class User {
 	private String bloodType;		// 혈액형
 	private boolean lover; 			// 애인여부
 	
+	private boolean admin;			// 관리자 권한 
+	
 	private List<Category> category;
 
 	public User() {
 		super();
-		
 	}
 
-	public User(String name, String id, String password, int age, char gender, String city, String phone, String email,
+	public User(String name, String id, String password, int age, String gender, String city, String phone, String email,
 			String imgUrl, String statusMessge, String nickname, String selectInterest, String viewInterest,
-			String birthday, String mbti, String bloodType, boolean lover, List<Category> category) {
+			String birthday, String mbti, String bloodType, boolean lover, boolean admin, List<Category> category) {
 		super();
 		this.name = name;
 		this.id = id;
@@ -52,6 +53,7 @@ public class User {
 		this.mbti = mbti;
 		this.bloodType = bloodType;
 		this.lover = lover;
+		this.admin = admin;
 		this.category = category;
 	}
 
@@ -87,11 +89,11 @@ public class User {
 		this.age = age;
 	}
 
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
@@ -191,6 +193,14 @@ public class User {
 		this.lover = lover;
 	}
 
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+
 	public List<Category> getCategory() {
 		return category;
 	}
@@ -199,42 +209,18 @@ public class User {
 		this.category = category;
 	}
 
+
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", id=" + id + ", password=" + password + ", age=" + age + ", gender=" + gender
 				+ ", city=" + city + ", phone=" + phone + ", email=" + email + ", imgUrl=" + imgUrl + ", statusMessge="
 				+ statusMessge + ", nickname=" + nickname + ", selectInterest=" + selectInterest + ", viewInterest="
 				+ viewInterest + ", birthday=" + birthday + ", mbti=" + mbti + ", bloodType=" + bloodType + ", lover="
-				+ lover + ", category=" + category + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(age, birthday, bloodType, category, city, email, gender, id, imgUrl, lover, mbti, name,
-				nickname, password, phone, selectInterest, statusMessge, viewInterest);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		return age == other.age && Objects.equals(birthday, other.birthday)
-				&& Objects.equals(bloodType, other.bloodType) && Objects.equals(category, other.category)
-				&& Objects.equals(city, other.city) && Objects.equals(email, other.email) && gender == other.gender
-				&& Objects.equals(id, other.id) && Objects.equals(imgUrl, other.imgUrl) && lover == other.lover
-				&& Objects.equals(mbti, other.mbti) && Objects.equals(name, other.name)
-				&& Objects.equals(nickname, other.nickname) && Objects.equals(password, other.password)
-				&& Objects.equals(phone, other.phone) && Objects.equals(selectInterest, other.selectInterest)
-				&& Objects.equals(statusMessge, other.statusMessge) && Objects.equals(viewInterest, other.viewInterest);
+				+ lover + ", admin=" + admin + ", category=" + category + "]";
 	}
 
 
-	
+
 	
 	
 }
