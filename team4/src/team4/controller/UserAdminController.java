@@ -2,15 +2,20 @@ package team4.controller;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 import team4.model.Admin;
+import team4.model.Comment;
 import team4.model.User;
 
 public class UserAdminController {
 
+	User user = new User();
 	Admin admin = null;
+	List<Comment> comments = new ArrayList<>();
 	private HashMap<String,User> hMap = new HashMap<>();
 	
 
@@ -100,12 +105,20 @@ public class UserAdminController {
 	}
 	//여기까지 유저관리
 	
-	public void answerQA() {// QA답변
+	public void answerQA(Comment comment) {// QA답변
+		
+		
+		
+		if(user.getId().equals(admin.getId()) ) {
+			comments.add(comment);
+		}else {
+			System.out.println("Admin 전용입니다.");
+		}
+		
+		
 		
 	}
 	
 	
-
-		
 }
 	

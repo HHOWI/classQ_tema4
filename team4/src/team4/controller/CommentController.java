@@ -23,6 +23,7 @@ public class CommentController {
 	}
 
 
+	
 
 
 	// 댓글 보기
@@ -57,6 +58,10 @@ public class CommentController {
 		comments.add(comment);
 	}
 
+	
+	
+	
+	
 	public void likeComment(int index, Comment like) { // 좋아요 추가
 		comments.add(like);
 	}
