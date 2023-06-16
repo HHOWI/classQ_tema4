@@ -1,33 +1,41 @@
 package team4.model;
 
-public class Comment {
+import java.util.Date;
+import java.util.List;
 
-	private String id;
+public class Comment extends User {
+
 	private String comment;
-	private String writingTime;     // 작성 시간
-	private String like;			// 좋아요만 있고 싫어요는 없는게 컨셉
+	private Date writingTime;     // 작성 시간
+	private int like = 0;			// 좋아요만 있고 싫어요는 없는게 컨셉
 	
 	private User user;
 
-
-	public Comment() {}
-
-	public Comment(String id, String comment, String writingTime, String like, User user) {
+	public Comment() {
 		super();
-		this.id = id;
+	}
+
+	public Comment(String name, String id, String password, int age, String gender, String city, String phone,
+			String email, String imgUrl, String statusMessge, String nickname, String selectInterest,
+			String viewInterest, String birthday, String mbti, String bloodType, boolean lover, boolean admin,
+			List<Category> category, String comment, Date writingTime, int like, User user) {
+		super(name, id, password, age, gender, city, phone, email, imgUrl, statusMessge, nickname, selectInterest, viewInterest,
+				birthday, mbti, bloodType, lover, admin, category);
 		this.comment = comment;
 		this.writingTime = writingTime;
 		this.like = like;
 		this.user = user;
+		
+		
+		
 	}
 
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
+	public Comment(String comment, Date writingTime, int like, User user) {
+		super();
+		this.comment = comment;
+		this.writingTime = writingTime;
+		this.like = like;
+		this.user = user;
 	}
 
 	public String getComment() {
@@ -38,19 +46,19 @@ public class Comment {
 		this.comment = comment;
 	}
 
-	public String getWritingTime() {
+	public Date getWritingTime() {
 		return writingTime;
 	}
 
-	public void setWritingTime(String writingTime) {
+	public void setWritingTime(Date writingTime) {
 		this.writingTime = writingTime;
 	}
 
-	public String getLike() {
+	public int getLike() {
 		return like;
 	}
 
-	public void setLike(String like) {
+	public void setLike(int like) {
 		this.like = like;
 	}
 
@@ -62,12 +70,12 @@ public class Comment {
 		this.user = user;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Comment [id=" + id + ", comment=" + comment + ", writingTime=" + writingTime + ", like=" + like
-				+ ", user=" + user + "]";
+		return "Comment [comment=" + comment + ", writingTime=" + writingTime + ", like=" + like + ", user=" + user
+				+ "]";
 	}
+
 
 	
 	
