@@ -10,7 +10,7 @@ public class User {
 	private String id;				// 아이디
 	private String password;		// 비밀번호
 	private int age; 				// 나이
-	private char gender; 			// 성별
+	private String gender; 			// 성별
 	private String city; 			// 지역
 	private String phone;			// 핸드폰번호
 	private String email;			// 이메일
@@ -32,7 +32,7 @@ public class User {
 		super();
 	}
 
-	public User(String name, String id, String password, int age, char gender, String city, String phone, String email,
+	public User(String name, String id, String password, int age, String gender, String city, String phone, String email,
 			String imgUrl, String statusMessge, String nickname, String selectInterest, String viewInterest,
 			String birthday, String mbti, String bloodType, boolean lover, boolean admin, List<Category> category) {
 		super();
@@ -89,11 +89,11 @@ public class User {
 		this.age = age;
 	}
 
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
