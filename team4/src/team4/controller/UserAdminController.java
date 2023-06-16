@@ -13,6 +13,7 @@ import team4.model.User;
 
 public class UserAdminController {
 
+	
 	User user = new User();
 	boolean admin = user.isAdmin();
 	List<Comment> comments = new ArrayList<>();

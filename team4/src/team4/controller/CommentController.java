@@ -20,9 +20,6 @@ public class CommentController {
 	List<Comment> writingTime = new ArrayList<>();
 	SimpleDateFormat writingTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-	
-	
-
 	// 댓글 작성
 	public void addComment(String id, String password, Comment comment) {
 
@@ -35,18 +32,6 @@ public class CommentController {
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-			
-		if(uac.login(id, password)) { 
-			
-	
-			comments.add(comment);
-
-			
-
-		} else {
-			System.out.println("댓글 작성은 로그인 후 가능합니다.");
-
-		}
 		}
 	}
 

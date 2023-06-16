@@ -46,14 +46,13 @@ public class BoardController {
 	
 	
 	
-	
-	public int postPage (int page , Post post){                                       // 게시판 페이지수 추가             
+	public int postPage (int page , Post post){                                                    
 		
 		
 	
 		int posts = pc.postList().size();
 		
-	   if(posts == 20) {                                                               
+	   if(posts == 20) {                                                               // 게시판 페이지수 추가
 		page++;                 // if문 이용하여 게시글수 20개 이상일때 페이지수 추가
 	}
 	
@@ -62,7 +61,7 @@ public class BoardController {
 	
 	
 	
-	public List visitBoardList() {                                                    // 마지막 방문 게시판 목록
+	private List visitBoardList() {                                                    // 마지막 방문 게시판 목록
 		
 		
 		List lastList = null;
@@ -92,9 +91,8 @@ public class BoardController {
 		pc.postList.get(index);
 	}
 	
-
 	
-	public int recommends (Post recommends) {                                            // 게시글 추천수 보기
+	private int recommends (Post recommends) {                                            // 게시글 추천수 보기
 		 
 		int recommendCount = recommends.getRecommends();
 		
@@ -102,7 +100,7 @@ public class BoardController {
 		                                                        
 		
 	}
-	public int views (Post views) {                                                      // 게시글 조회수 보기
+	private int views (Post views) {                                                       // 게시글 조회수 보기
 		
 		int viewCount = views.getViews();
 		
@@ -111,7 +109,7 @@ public class BoardController {
 	}
 	
 	
-	public int comments (Comment comment) {                                             // 게시글 댓글수 보기
+	private int comments (Comment comment) {                                             // 게시글 댓글수 보기
 		 
 		
 		
