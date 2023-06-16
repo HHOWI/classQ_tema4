@@ -42,6 +42,8 @@ public class CommentController {
 
 		if(comment.getId().equals(user.getId())) {
 			comments.set(index, comment);
+		} else {
+			System.out.println("작성자가 아닙니다. 수정 불가");
 		}
 
 	}
@@ -53,6 +55,8 @@ public class CommentController {
 
 		if(comment.getId().equals(user.getId())) {
 			comments.remove(index);
+		} else {
+			System.out.println("작성자가 아닙니다. 삭제 불가");
 		}
 
 	}
