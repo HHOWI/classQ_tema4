@@ -3,28 +3,31 @@ package team4.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import team4.model.Admin;
+
 import team4.model.Board;
+import team4.model.Comment;
 import team4.model.Post;
 import team4.model.User;
 
 public class BoardController {
 	
 	Board board = new Board();
-	Admin admin = new Admin();
 	User user = new User();
-	Post post = new Post();
 	PostController pc = new PostController();
+	CommentController cc = new CommentController();
 	
 	ArrayList<Board> boardList = new ArrayList<>();
 	
 	// CRUD
 	
 	
+	boolean admin = user.isAdmin();
+	
+	
 	
 	public void addBoard(Board board) {                                               // 게시판 추가하기
 		
-		if(user.getId().equals(admin.getId()) ) {			
+		if(admin)  {			
 			boardList.add(board);	
 			
 		}else {
@@ -83,13 +86,42 @@ public class BoardController {
 		boardList.get(index);
 	}
 	
+	
+	private int recommends (Post recommends) {                                            // 게시글 추천수 보기
+		 
+		int recommendCount = recommends.getRecommends();
+		
+		return recommendCount;
+		                                                        
+		
+	}
+	private int views (Post views) {                                                       // 게시글 조회수 보기
+		
+		int viewCount = views.getViews();
+		
+		return viewCount;
+		
+	}
+	
+	
+	private int comments (Comment comment) {                                             // 게시글 댓글수 보기
+		 
+		
+		
+		return cc.comments.size();
+	}
+	
+	
+	
+
+	
 
 	// 게시판 수정 및 삭제는 admin 계정만 가능하도록 설정하기
 	// 맞는지 확인필요
 	
 	public void updataBoard(int index, Board board) {                                  // 게시판 수정
 	
-		if(user.getId().equals(admin.getId()) ) {			
+		if(admin)  {			
 			boardList.set(index, board);			
 		}else {
 			System.out.println("Admin 전용입니다.");
@@ -101,7 +133,7 @@ public class BoardController {
 	public void deleteBoard(Board board) {                                          // 게시판 삭제
 		
 		
-		if(user.getId().equals(admin.getId()) ) {			
+		if(admin)  {			
 			
 			 boardList.remove(board);
 		}else {

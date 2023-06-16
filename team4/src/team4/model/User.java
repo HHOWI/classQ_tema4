@@ -30,7 +30,6 @@ public class User {
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(String name, String id, String password, int age, char gender, String city, String phone, String email,
@@ -209,6 +208,17 @@ public class User {
 	public void setCategory(List<Category> category) {
 		this.category = category;
 	}
+
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", id=" + id + ", password=" + password + ", age=" + age + ", gender=" + gender
+				+ ", city=" + city + ", phone=" + phone + ", email=" + email + ", imgUrl=" + imgUrl + ", statusMessge="
+				+ statusMessge + ", nickname=" + nickname + ", selectInterest=" + selectInterest + ", viewInterest="
+				+ viewInterest + ", birthday=" + birthday + ", mbti=" + mbti + ", bloodType=" + bloodType + ", lover="
+				+ lover + ", admin=" + admin + ", category=" + category + "]";
+	}
+
 
 
 	

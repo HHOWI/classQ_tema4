@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-import team4.model.Admin;
 import team4.model.Comment;
 import team4.model.User;
 
@@ -19,12 +18,16 @@ public class UserAdminController {
 	private HashMap<String,User> hMap = new HashMap<>();
 	
 
+
+
+
 	public boolean addManager(String id, User a) {
 		if(hMap.containsKey(id)) {
 			hMap.put(id, a);		
 			return true;
 		}
 		return false;
+
 
 
 	}
