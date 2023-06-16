@@ -43,9 +43,7 @@ public class BoardController {
 		
 	}
 	
-	
-	
-	
+
 	
 	public int postPage (int page , Post post){                                       // 게시판 페이지수 추가             
 		
