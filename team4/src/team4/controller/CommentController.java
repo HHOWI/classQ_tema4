@@ -88,14 +88,10 @@ public class CommentController {
 	
 
 
-	public void commentwritingTime(Comment comment, String writingTime) { // 작성 시간
-
-
-		System.out.println("작성 시간 : " + comment.getWritingTime());
 
 	}
 
-}
+
 
 
 
