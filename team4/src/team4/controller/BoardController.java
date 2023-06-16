@@ -62,7 +62,7 @@ public class BoardController {
 	
 	
 	
-	private List visitBoardList() {                                                    // 마지막 방문 게시판 목록
+	public List visitBoardList() {                                                    // 마지막 방문 게시판 목록
 		
 		
 		List lastList = null;
@@ -92,19 +92,9 @@ public class BoardController {
 		pc.postList.get(index);
 	}
 	
-    public void adiminReadBoard (int index) {                                           // QnA 게시글 보기
+
 	
-	
-		pc.postList.get(index);
-	
-		
-	}
-	
-	
-	
-	
-	
-	private int recommends (Post recommends) {                                            // 게시글 추천수 보기
+	public int recommends (Post recommends) {                                            // 게시글 추천수 보기
 		 
 		int recommendCount = recommends.getRecommends();
 		
@@ -112,7 +102,7 @@ public class BoardController {
 		                                                        
 		
 	}
-	private int views (Post views) {                                                      // 게시글 조회수 보기
+	public int views (Post views) {                                                      // 게시글 조회수 보기
 		
 		int viewCount = views.getViews();
 		
@@ -121,7 +111,7 @@ public class BoardController {
 	}
 	
 	
-	private int comments (Comment comment) {                                             // 게시글 댓글수 보기
+	public int comments (Comment comment) {                                             // 게시글 댓글수 보기
 		 
 		
 		

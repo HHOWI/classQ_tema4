@@ -14,9 +14,7 @@ public interface BoardControllerImpl {
 	
 	public int postPage (int page);                          // 게시판 페이시수 추가
 
-	private List visitBoardList() {                          // 마지막 방문 게시판 목록 
-		return null;
-	}                    
+	public List visitBoardList();                            // 마지막 방문 게시판 목록 	                   
 	
 	public ArrayList<Board> boardList();                     // 게시판 목록
 	   
@@ -24,21 +22,11 @@ public interface BoardControllerImpl {
 	
 	public void adiminReadBoard (int index);                 // QnA(어드민전용)게시글 보기
 	
-	private int recommends(Post recommends) {                // 게시글 추천수 보기
-		
-		return 0;	
-	}
+	public int recommends(Post recommends);                  // 게시글 추천수 보기
 	
-	private int views(Post views) {                          // 게시글 조회수 보기                                
-		
-		return 0;
-    }
-    
-	private int comments(Comment comment) {                  // 게시글 댓글수 보기
-		return 0;
-	}                 
-		 
+	public int views(Post views);                            // 게시글 조회수 보기                                
 	
+	public int comments(Comment comment);                    // 게시글 댓글수 보기
 	
 	public void updataBoard(int index, Board board);         // 게시판 수정
 	

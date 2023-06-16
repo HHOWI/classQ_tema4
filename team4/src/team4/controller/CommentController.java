@@ -16,11 +16,15 @@ public class CommentController {
 	User user = new User();
 	SimpleDateFormat writingTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+	
+	
 
 	// 댓글 작성
 	public void addComment(String id, String password, Comment comment) {
 
-		if(uac.login(id, password)) {       
+		if(uac.login(id, password)) { 
+			
+	
 			comments.add(comment);
 
 			
