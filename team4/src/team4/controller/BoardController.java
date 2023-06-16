@@ -22,6 +22,9 @@ public class BoardController {
 	
 	
 	
+	
+	
+	
 	public void addBoard(Board board) {                                               // 게시판 추가하기
 		
 		if(user.getId().equals(admin.getId()) ) {			
@@ -82,6 +85,10 @@ public class BoardController {
 		
 		boardList.get(index);
 	}
+	
+	
+	
+
 	
 
 	// 게시판 수정 및 삭제는 admin 계정만 가능하도록 설정하기

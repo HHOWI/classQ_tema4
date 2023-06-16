@@ -20,7 +20,7 @@ public class UserAdminController {
 	
 
 
-	public void addManager() { 
+
 
 	public boolean addManager(String id, User a) {
 		if(hMap.containsKey(id)) {
