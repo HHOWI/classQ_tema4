@@ -3,6 +3,7 @@ package team4.controller;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -52,7 +53,7 @@ public class UserAdminController {
 	// 유저 관리
 	public void  userViewProfile(User viewuser){// 유저 계정 보기
 		if(user.isAdmin()) {
-			
+			System.out.print(Arrays.toString(list));
 		}
 		
 	}
