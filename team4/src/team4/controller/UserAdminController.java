@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-import team4.model.Admin;
 import team4.model.Comment;
 import team4.model.User;
 
