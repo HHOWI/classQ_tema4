@@ -20,7 +20,7 @@ public class UserAdminController {
 	
 
 
-	public void addManager() {// 관리자 추가 아이시발 깜빡했네이거
+	public void addManager() { 
 
 
 	}
