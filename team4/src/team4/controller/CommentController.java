@@ -1,4 +1,5 @@
 package team4.controller;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import team4.model.Comment;
@@ -13,6 +14,8 @@ public class CommentController {
 	List<Comment> comments = new ArrayList<>();
 	UserAdminController uac = new UserAdminController();
 	User user = null;
+	SimpleDateFormat writingTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
 
 	// 댓글 작성
 	public void addComment(String id, String password, Comment comment) {
@@ -53,6 +56,7 @@ public class CommentController {
 		}
 
 	}
+	
 
 	public void replyComment(String id, String password, Comment comment) { // 답글 추가
 		comments.add(comment);
@@ -65,5 +69,15 @@ public class CommentController {
 	public void likeComment(int index, Comment like) { // 좋아요 추가
 		comments.add(like);
 	}
+	
+	
+	public void commentwritingTime(Comment comment, String writingTime) { // 작성 시간
+		
+	comment.getWritingTime();
+	
+	}
+	
 }
+
+
 
