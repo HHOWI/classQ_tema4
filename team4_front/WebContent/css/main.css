@@ -1,38 +1,8 @@
-header {
-  position: sticky;
-  top: 0;
-
-  background: orange;
-  color: white;
-  padding-left: 32px;
-  padding-right: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+label {
+  position: relative;
 }
-
-main {
-  padding: 32px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin-left: 16px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-html {
-  height: 200%;
-  line-height: 1.6;
-}
-
-.login-button {
-  font-size: 18px;
-  padding: 8px 16px;
+button {
+  position: absolute;
+  left: 7px;
+  top: 4px;
 }
