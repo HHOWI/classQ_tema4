@@ -1,3 +1,55 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .logo {
-    width: 18dvh;
+  width: 18dvh;
+}
+
+header {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ff7f38;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 40px;
+  color: #ff7f38;
+}
+
+#siteName {
+  font-weight: bold;
+}
+
+.navbar__menu,
+.navbar__login {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li,
+.navbar__login li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  color: white;
+  background-color: #ff7f38;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
 }
