@@ -14,27 +14,33 @@
   </head>
   <body>
     <header>
+      <logo>
+        <img src="images/logo.png" class="logoimg" />
+        <img src="images/title.jpg" />
+      </logo>
       <nav class="navbar">
-        <div class="navbar__logo">
-          <img src="images/logo.png" class="logo" />
-          <span id="siteName">코끼리끼리</span>
-        </div>
-
         <ul class="navbar__menu">
           <li><a href="">끼리후기</a></li>
           <li><a href="">커뮤니티</a></li>
         </ul>
 
         <div class="navbar__search">
-          <input
-            type="text"
-            id="search"
-            name="search"
-            placeholder="원하는 끼리를 검색해보세요"
-          />
+          <div class="icon"></div>
+          <div class="input">
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="원하는 끼리를 검색해보세요"
+            />
+          </div>
+          <span
+            class="clear"
+            onclick="document.getElementById('search').value=''"
+          ></span>
         </div>
 
-        <ul class="navbar__login">
+        <ul class="navbar__sign">
           <li><a href="">로그인</a></li>
           <li><a href="">회원가입</a></li>
         </ul>
